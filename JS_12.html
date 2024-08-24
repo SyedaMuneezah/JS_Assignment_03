@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        //Math Method
+
+        // 1. Write a program that takes a positive integer from user &
+        // display the following in your browser.
+        // a. number
+        // b. round off value of the number
+        // c. floor value of the number
+        // d. ceil value of the number
+
+
+        var userNumber = + prompt("Enter a positive integer");
+        var roundValue = Math.round(userNumber);
+        var floorValue = Math.floor(userNumber);
+        var cielValue = Math.ceil(userNumber);
+        document.write(`number: ${userNumber} <br>`);
+        document.write(`round off value: ${roundValue} <br>`);
+        document.write(`floor value: ${floorValue} <br>`);
+        document.write(`ciel value: ${cielValue} <br> <br>`);
+
+
+        // 2. Write a program that takes a negative floating point
+        // number from user & display the following in your browser.
+        // a. number
+        // b. round off value of the number
+        // c. floor value of the number
+        // d. ceil value of the number
+
+        var userNumberNeg = + prompt("Enter a negative integer");
+        var roundValueNeg = Math.round(userNumberNeg);
+        var floorValueNeg = Math.floor(userNumberNeg);
+        var cielValueNeg = Math.ceil(userNumberNeg);
+        document.write(`number: ${userNumberNeg} <br>`);
+        document.write(`round off value: ${roundValueNeg} <br>`);
+        document.write(`floor value: ${floorValueNeg} <br>`);
+        document.write(`ciel value: ${cielValueNeg} <br> <br>`);
+
+        // 3. Write a program that displays the absolute value of a number.
+        // E.g. absolute value of -4 is 4 & absolute value of 5 is 5
+
+        var absoluteVal = -4;
+        var abs = Math.abs(absoluteVal);
+        document.write(`The absolute value of: ${absoluteVal} is ${abs} <br>`);
+
+        // 4. Write a program that simulates a dice using random()
+        // method of JS Math class. Display the value of dice in your
+        // browser.
+
+        var diceValue1 = Math.floor(Math.random() * 6) + 1;
+        document.write("random dice value " + diceValue1 + "<br>" + "<br>");
+
+        // 5. Write a program that simulates a coin toss using random()
+        // method of JS Math class. Display the value of coin in your
+        // browser
+        var coin1 = Math.floor(Math.random() * 2) + 1;
+        if (coin1 === 2) {
+            document.write("2" + "<br>" + "random coin value: Heads" + "<br>" + "<br>" );
+        }
+        else {
+            document.write("1" + "<br>" + "random coin value: Tails" + "<br>" + "<br>");
+        }
+
+
+        // 6. Write a program that shows a random number between 1
+        // and 100 in your browser.
+        var randNum = Math.floor(Math.random() * 100) + 1;
+        document.write(`random number between 1 and 100: ${randNum} <br>`);
+
+        // 7. Write a program that asks the user about his weight. Parse
+        // the user input and display his weight in your browser.
+        // Possible user inputs can be:
+        // a. 50
+        // b. 50kgs
+        // c. 50.2kgs
+        // d. 50.2kilograms
+
+        var weightInput = prompt("Please enter your weight (e.g., 50, 50kgs, 50.2kgs, 50.2kilograms):");
+        var weight = parseFloat(weightInput);
+        document.write("<br>" + "The weight of user is" + weight + "kilograms"  + "<br>");
+
+        // 8. Write a program that stores a random secret number from
+        // 1 to 10 in a variable. Ask the user to input a number
+        // between 1 and 10. If the user input equals the secret
+        // number, congratulate the user.
+
+        var secretNum = Math.floor(Math.random() * 10) + 1;
+        var userGuess = prompt("Guess a number between 1 and 10"); 
+        if (userGuess === secretNum) {
+            document.write(`Congratulations! Your Guess is equal to the secret number: ${userGuess}`);
+        }
+        else{
+            alert("Try again!"); 
+        }
+    </script>
+</body>
+
+</html>
